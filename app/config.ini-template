@@ -1,0 +1,14 @@
+[twitter]
+api_key = 
+api_secret_key = 
+access_token = 
+access_token_secret = 
+;stream_keywords: comma separated values. Eg: big data, artificial intelligence, aws, microsoft
+stream_keywords = 
+
+[aws]
+access_key_id = 
+secret_access_key = 
+default_region = 
+kinesis_stream_name = 
+s3_bucket = 
