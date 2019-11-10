@@ -32,7 +32,7 @@ twitter_stream = tweepy.Stream(auth=twitter_api.auth, listener=TwitterStreamList
 
 
 try:
-    print('Start streaming...')
+    print('Streaming started...')
 
     if len(twitter_keywords):
         twitter_stream.filter(track=twitter_keywords)
@@ -43,5 +43,5 @@ except KeyboardInterrupt as e:
     print('Streaming stopped.')
 
 finally:
-    print('Done.')
+    print('Application closed.')
     twitter_stream.disconnect()
