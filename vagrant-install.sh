@@ -14,6 +14,9 @@ echo '===================================='
 sudo apt-get -y install python3 python3-pip
 pip3 install --no-cache-dir -r /vagrant/requirements.txt
 
+echo "alias python=python3" >> ~/.bashrc
+source ~/.bashrc
+
 echo '===================================='
 echo 'Setup complete!'
 echo '===================================='
