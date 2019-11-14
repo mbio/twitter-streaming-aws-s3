@@ -10,6 +10,6 @@ Vagrant.configure("2") do |config|
   end
   
   config.vm.box = "ubuntu/bionic64"
-  config.vm.provision "shell", path: "vagrant-install.sh"
+  config.vm.provision "shell", path: "vagrant-install.sh", privileged: false
 
 end
