@@ -14,7 +14,12 @@ echo '===================================='
 sudo apt-get -y install python3 python3-pip
 pip3 install --no-cache-dir -r /vagrant/requirements.txt
 
-echo "alias python=python3" >> ~/.bashrc
+ALIAS=$(cat <<EOF
+alias python=python3
+alias pip=pip3
+EOF
+)
+echo "${ALIAS}" >> ~/.bashrc
 source ~/.bashrc
 
 echo '===================================='

@@ -13,6 +13,7 @@ Exemple de data pipeline pour extraire des tweets et les enregistrer dans AWS S3
 - Renommer le ficher `app/config.ini-template` en `app/config.ini` et inscrire:
     - les informations de connexion aux comptes AWS et Twitter;
     - les mots-clés à suivre sur Twitter, séparés par des virgules.
+- Cloner/télécharger ce projet sur votre poste.
 
 ## Exécution
 

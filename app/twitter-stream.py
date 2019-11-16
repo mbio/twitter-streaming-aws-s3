@@ -3,16 +3,6 @@ import json
 import tweepy
 
 
-config = configparser.ConfigParser()
-config.read('config.ini')
-
-twitter_api_key = config['twitter']['api_key']
-twitter_api_secret_key = config['twitter']['api_secret_key']
-twitter_access_token = config['twitter']['access_token']
-twitter_access_token_secret = config['twitter']['access_token_secret']
-twitter_keywords = [x.strip() for x in config['twitter']['stream_keywords'].split(',') if x != '']
-
-
 class TwitterStreamListener(tweepy.StreamListener):
     
     def on_data(self, data):
@@ -24,6 +14,15 @@ class TwitterStreamListener(tweepy.StreamListener):
         print('Error status code: ', status_code)
         return False
 
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+twitter_api_key = config['twitter']['api_key']
+twitter_api_secret_key = config['twitter']['api_secret_key']
+twitter_access_token = config['twitter']['access_token']
+twitter_access_token_secret = config['twitter']['access_token_secret']
+twitter_keywords = [x.strip() for x in config['twitter']['stream_keywords'].split(',') if x != '']
 
 twitter_oauth = tweepy.OAuthHandler(twitter_api_key, twitter_api_secret_key)
 twitter_oauth.set_access_token(twitter_access_token, twitter_access_token_secret)
