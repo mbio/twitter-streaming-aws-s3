@@ -1,3 +1,2 @@
-amazon_kclpy == 2.0.1
 boto3 == 1.10.14
 tweepy == 3.8.0

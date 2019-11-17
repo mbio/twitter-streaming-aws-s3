@@ -7,8 +7,7 @@ access_token_secret =
 stream_keywords = 
 
 [aws]
-access_key_id = 
-secret_access_key = 
-default_region = 
-kinesis_stream_name = 
-s3_bucket = 
+access_key_id =
+secret_access_key =
+region = us-east-1
+kinesis_stream_name =
